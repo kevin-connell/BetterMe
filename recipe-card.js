@@ -21,16 +21,22 @@ $(document).ready(function () {
 
         favorites = noDuplicates(favorites)
 
+        favorites.splice(6);
+
+        localStorage.setItem("favorites list", JSON.stringify(favorites));
+
+        renderFavorites()
     }
 
-    function noDuplicates() {
-
-
+    function noDuplicates(x) {
+        newObj = {};
+        x.forEach(function (item) {
+            if (!newObj[item]) {
+                newObj[item] = true;
+            }
+        });
+        return Object.keys(newObj);
     }
-
-
-
-    
 
     var labelID = localStorage.getItem("selectedRecipe")
 
