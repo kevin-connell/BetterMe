@@ -53,7 +53,6 @@ $(document).ready(function () {
     // Variables for Storing Recipe Info to Display Later
 
 
-
     // Function to Run Edamam API
 
     $("#SEARCH BUTTON").on("click", function (event) {
