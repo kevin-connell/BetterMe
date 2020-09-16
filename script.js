@@ -27,7 +27,7 @@ $(document).ready(function () {
     };
     
     GetInfoWorkout();
-    
+    // Sedentary activity only body weight workouts 
     // Muscles: ID numbers for muscles
             // 1 - Biceps brachii
             // 2 - Anterior deltoid
