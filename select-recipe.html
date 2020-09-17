@@ -16,28 +16,37 @@
 
 <body>
 
-        <!-- Header -->
-        <nav>
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo">BetterMe</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">❤️️Favorites<i
-                                class="material-icons right">arrow_drop_down</i></a></li>
-                </ul>
-            </div>
-        </nav>
+    <!-- Header -->
 
-        <!-- Select recipe form -->
-        <main></main>
-        <h3>Select your recipe</h3>
-        <p>From the following options, select the meal that interests you the most, or search through our recipe catalog. Let's get cooking!</p>
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+    </ul>
 
-        <div id="recipeResults"></div>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">BetterMe</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">❤️️Favorites<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Select recipe form -->
+
+    <main></main>
+    <h3>Select your recipe</h3>
+    <p>From the following options, select the meal that interests you the most, or search through our recipe catalog.
+        Let's get cooking!</p>
+
+    <div id="recipeResults"></div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="display-recipe-results.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript" src="display-recipe-results.js"></script>
 
 </body>
 
