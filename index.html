@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -22,7 +22,7 @@
             <class="nav-item">
                 <a class="nav-link" href="select-recipe.html">Your Favorited Recipes</a>
         </nav>
-        
+
 
 
 
@@ -47,91 +47,112 @@
     <main class="container">
         <div class="row">
             <div class="col-md-12">
-                <form id="dietRestrictions" <div id="searchBtn">
+                <form id="dietRestrictions">
+                    <div id="searchBtn"></div>
+                    <div id="dietPreferences"></div>
+                    <div id="activityLevel"></div>
+                </form>
             </div>
-            <div id="dietPreferences"></div>
-            <div id="activityLevel"></div>
-        </div>
-        </form>
-        </div>
         </div>
     </main>
 
-<!-- Checkbox options for diet -->
+    <!-- Search Bar For Food -->
+    <label for="recipeSearch">Search Recipe:</label>
+    <input type="text" id="recipeSearch" name="recipeSearch">
+    <button id="recipeSearchButton">Search</button>
+    
+    <!-- Checkbox options for diet -->
     <h5>Select your diet preferences</h5>
     <form action="#">
         <p>
-            <input type="checkbox" class="glutenFree" />
-            <span>Gluten-Free</span>
-          </label>
+            <input type="checkbox" class="balanced" />
+            <span>Balanced</span>
+            </label>
         </p>
         <p>
-    <p>
-        <p>
-            <input type="checkbox" class="vegetarian" />
-            <span>Vegetarian</span>
-          </label>
+            <input type="checkbox" class="high-protein" />
+            <span>High Protein</span>
+            </label>
         </p>
         <p>
-    <p>
+            <input type="checkbox" class="low-fat" />
+            <span>Low Fat</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="low-carb" />
+                <span>Low Carb</span>
+            </label>
+        </p>
         <p>
             <input type="checkbox" class="vegan" />
             <span>Vegan</span>
-          </label>
+            </label>
         </p>
         <p>
-    <p>
-        
+            <input type="checkbox" class="vegetarian" />
+            <span>Vegetarian</span>
+            </label>
+        </p>
         <p>
-          <label>
-            <input type="checkbox" class="peanutFree" />
+            <input type="checkbox" class="sugar-conscious" />
+            <span>Sugar Conscious</span>
+            </label>
+        </p>
+        <p>
+            <input type="checkbox" class="peanut-free" />
             <span>Peanut Free</span>
-          </label>
+            </label>
         </p>
         <p>
-    <p>
-        <input type="checkbox" class="shellfishFree" />
-        <span>Shellfish Free</span>
-      </label>
-    </p>
-</form>
-<br>
-<!-- Checkbox options for activity level-->
-<h5>Select your activity level</h5>
-<form action="#">
-    <p>
-        <input type="checkbox" class="sedentary" />
-        <span>Sedentary</span>
-      </label>
-    </p>
-    <p>
-<p>
-    <p>
-        <input type="checkbox" class="moderate" />
-        <span>Moderate</span>
-      </label>
-    </p>
-    <p>
-<p>
-    <p>
-        <input type="checkbox" class="active" />
-        <span>Active</span>
-      </label>
-    </p>
-</form>
-<br>
-<button class="searchBtn" type="search" name="action">Search
-    <i class="search-icon right"></i>
-</button>
+            <input type="checkbox" class="tree-nut-free" />
+            <span>Tree Nut Free</span>
+            </label>
+        </p>
+        <p>
+            <input type="checkbox" class="alcohol-free" />
+            <span>Alcohol Free</span>
+            </label>
+        </p>
+    </form>
+    <br>
+    <!-- Checkbox options for activity level-->
+    <h5>Select your activity level</h5>
+    <form action="#">
+        <p>
+            <input type="checkbox" class="sedentary" />
+            <span>Sedentary</span>
+            </label>
+        </p>
+        <p>
+        <p>
+        <p>
+            <input type="checkbox" class="moderate" />
+            <span>Moderate</span>
+            </label>
+        </p>
+        <p>
+        <p>
+        <p>
+            <input type="checkbox" class="active" />
+            <span>Active</span>
+            </label>
+        </p>
+    </form>
+    <br>
+    <button class="searchBtn" type="search" name="action">Search
+        <i class="search-icon right"></i>
+    </button>
 
-    
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="select-recipe.js"></script>
     <script type="text/javascript" src="recipe-card.js"></script>
     <script type="text/javascript" src="assets/js/vendor.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script> 
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 
 </html>

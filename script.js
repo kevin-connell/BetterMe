@@ -25,8 +25,10 @@ $(document).ready(function () {
             console.log(response);
         });
     };
+
+});
     
-    GetInfoWorkout();
+    // GetInfoWorkout();
     
     // Muscles: ID numbers for muscles
             // 1 - Biceps brachii

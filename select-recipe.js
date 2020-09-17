@@ -2,19 +2,48 @@ $(document).ready(function () {
 
     // Variables For Health and Diet
 
-    var glutenFree = "";
+    var balanced = "";
+    var highProtein = "";
+    var lowFat = "";
+    var lowCarb = "";
     var vegetarian = "";
     var vegan = "";
+    var sugarConscious = "";
     var peanutFree = "";
-    var shellfishFree = "";
+    var treeNutFree = "";
+    var alcoholFree = "";
 
     // Selecting Options for Recipe Search
 
-    $(".glutenFree").change(function () {
+    $(".balanced").change(function () {
         if (this.checked == true) {
-            glutenFree = "&health=gluten-free";
+            balanced = "&diet=balanced";
         } else if (this.checked != true) {
-            glutenFree = "";
+            balanced = "";
+        }
+    });
+
+    $(".high-protein").change(function () {
+        if (this.checked == true) {
+            highProtein = "&diet=high-protein";
+        } else if (this.checked != true) {
+            highProtein = "";
+        }
+    });
+
+    $(".low-fat").change(function () {
+        if (this.checked == true) {
+            lowFat = "&diet=low-fat";
+        } else if (this.checked != true) {
+            lowFat = "";
+        }
+    });
+
+    $(".low-carb").change(function () {
+        if (this.checked == true) {
+            lowCarb = "&diet=low-carb";
+        } else if (this.checked != true) {
+            lowCarb = "";
         }
     });
 
@@ -34,6 +63,14 @@ $(document).ready(function () {
         }
     });
 
+    $(".sugar-conscious").change(function () {
+        if (this.checked == true) {
+            sugarConscious = "&health=sugar-conscious";
+        } else if (this.checked != true) {
+            sugarConscious = "";
+        }
+    });
+
     $(".peanutFree").change(function () {
         if (this.checked == true) {
             peanutFree = "&health=peanut-free";
@@ -42,38 +79,45 @@ $(document).ready(function () {
         }
     });
 
-    $(".shellfishFree").change(function () {
+    $(".tree-nut-free").change(function () {
         if (this.checked == true) {
-            shellfishFree = "&health=shellfish-free";
+            treeNutFree = "&health=tree-nut-free";
         } else if (this.checked != true) {
-            shellfishFree = "";
+            treeNutFree = "";
         }
     });
 
-    // Variables for Storing Recipe Info to Display Later
-
+    $(".alcohol-free").change(function () {
+        if (this.checked == true) {
+            alcoholFree = "&health=alcohol-free";
+        } else if (this.checked != true) {
+            alcoholFree = "";
+        }
+    });
 
     // Function to Run Edamam API
 
-    $("#SEARCH BUTTON").on("click", function (event) {
+    $("#recipeSearchButton").on("click", function (event) {
         event.preventDefault();
+
+        // Create/Reset recipe array to store recipe results
+
+        var recipeResults = [];
 
         // Search Term Variables
 
-        var searchTerm = "";
-        var numberOfResults = "";
+        var searchTerm = $("#recipeSearch").val().trim();;
+        var numberOfResults = "5";
         var calorieMin = "0";
         var calorieMax = "2000";
 
         // Variables For Health and Diet
 
-        var healthRestriction = glutenFree + vegetarian + vegan + peanutFree + shellfishFree;
-        
-        var dietRestriction = "";
+        var healthAndDietRestrictions = balanced + highProtein + lowFat + lowCarb + vegetarian + vegan + sugarConscious + peanutFree + treeNutFree + alcoholFree;
 
         // URL with Variables
 
-        var queryURL = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=a9f85e6a&app_key=77f6e24e315d52d60bcbb1e1b428e579&from=0&to=" + numberOfResults + "&calories=" + calorieMin + "-" + calorieMax + healthRestriction + dietRestriction;
+        var queryURL = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=a9f85e6a&app_key=77f6e24e315d52d60bcbb1e1b428e579&from=0&to=" + numberOfResults + "&calories=" + calorieMin + "-" + calorieMax + healthAndDietRestrictions;
 
         // Ajax Function
 
@@ -103,8 +147,13 @@ $(document).ready(function () {
                 }
 
                 // URL for recipe
-                console.log(response.hits[i].recipe.url)
+                console.log(response.hits[i].recipe.url);
+
+                recipeResults.push(response);
             }
+
+            // Add results to local storage
+            localStorage.setItem("recipeResults", JSON.stringify(recipeResults));
         });
     });
 });
