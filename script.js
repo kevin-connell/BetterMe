@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $(".dropdown-trigger").dropdown();
+
     function generateRecipes(){
         
         var queryURL = ""

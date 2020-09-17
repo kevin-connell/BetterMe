@@ -4,34 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="assets/css/foundation.css">
     <meta class="foundation-mq">
     <title>BetterMe</title>
 </head>
 
 <body>
-    <header class="container">
-        <!-- Header -->
-        <nav id="navBar">
-            <h1>BetterMe</h1>
-            <class="nav-item">
-                <a class="nav-link" href="select-recipe.html">Your Favorited Recipes</a>
-        </nav>
-
-
-
-
-
-
-
-
-
-    </header>
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+    </ul>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">BetterMe</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Favorites<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Mission -->
     <h2>Our Mission</h2>
@@ -60,59 +57,68 @@
     <label for="recipeSearch">Search Recipe:</label>
     <input type="text" id="recipeSearch" name="recipeSearch">
     <button id="recipeSearchButton">Search</button>
-    
+
     <!-- Checkbox options for diet -->
     <h5>Select your diet preferences</h5>
     <form action="#">
         <p>
-            <input type="checkbox" class="balanced" />
-            <span>Balanced</span>
-            </label>
-        </p>
-        <p>
-            <input type="checkbox" class="high-protein" />
-            <span>High Protein</span>
-            </label>
-        </p>
-        <p>
-            <input type="checkbox" class="low-fat" />
-            <span>Low Fat</span>
+            <label>
+                <input type="checkbox" class="filled-in balanced" />
+                <span>Balanced</span>
             </label>
         </p>
         <p>
             <label>
-                <input type="checkbox" class="low-carb" />
+                <input type="checkbox" class="filled-in high-protein" />
+                <span>High Protein</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in low-fat" />
+                <span>Low Fat</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in low-carb" />
                 <span>Low Carb</span>
             </label>
         </p>
         <p>
-            <input type="checkbox" class="vegan" />
-            <span>Vegan</span>
+            <label>
+                <input type="checkbox" class="filled-in vegan" />
+                <span>Vegan</span>
             </label>
         </p>
         <p>
-            <input type="checkbox" class="vegetarian" />
-            <span>Vegetarian</span>
+            <label>
+                <input type="checkbox" class="filled-in vegetarian" />
+                <span>Vegetarian</span>
             </label>
         </p>
         <p>
-            <input type="checkbox" class="sugar-conscious" />
-            <span>Sugar Conscious</span>
+            <label>
+                <input type="checkbox" class="filled-in sugar-conscious" />
+                <span>Sugar Conscious</span>
             </label>
         </p>
         <p>
-            <input type="checkbox" class="peanut-free" />
-            <span>Peanut Free</span>
+            <label>
+                <input type="checkbox" class="filled-in peanut-free" />
+                <span>Peanut Free</span>
             </label>
         </p>
         <p>
-            <input type="checkbox" class="tree-nut-free" />
-            <span>Tree Nut Free</span>
+            <label>
+                <input type="checkbox" class="filled-in tree-nut-free" />
+                <span>Tree Nut Free</span>
             </label>
         </p>
         <p>
-            <input type="checkbox" class="alcohol-free" />
-            <span>Alcohol Free</span>
+            <label>
+                <input type="checkbox" class="filled-in alcohol-free" />
+                <span>Alcohol Free</span>
             </label>
         </p>
     </form>
@@ -121,22 +127,21 @@
     <h5>Select your activity level</h5>
     <form action="#">
         <p>
-            <input type="checkbox" class="sedentary" />
-            <span>Sedentary</span>
+            <label>
+                <input type="checkbox" class="filled-in sedentary" />
+                <span>Sedentary</span>
             </label>
         </p>
         <p>
-        <p>
-        <p>
-            <input type="checkbox" class="moderate" />
-            <span>Moderate</span>
+            <label>
+                <input type="checkbox" class="filled-in moderate" />
+                <span>Moderate</span>
             </label>
         </p>
         <p>
-        <p>
-        <p>
-            <input type="checkbox" class="active" />
-            <span>Active</span>
+            <label>
+                <input type="checkbox" class="filled-in active" />
+                <span>Active</span>
             </label>
         </p>
     </form>
@@ -148,9 +153,9 @@
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="select-recipe.js"></script>
-    <script type="text/javascript" src="assets/js/vendor.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 
 </html>
