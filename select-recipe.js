@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    // Clear Previous Selected Recipe if Any
+    
+    var selectedRecipe = [];
+
+    localStorage.setItem("selectedRecipe", JSON.stringify(selectedRecipe));
+    
     // Variables For Health and Diet
 
     var balanced = "";
@@ -107,7 +113,7 @@ $(document).ready(function () {
         // Search Term Variables
 
         var searchTerm = $("#recipeSearch").val().trim();;
-        var numberOfResults = "5";
+        var numberOfResults = "10";
         var calorieMin = "0";
         var calorieMax = "2000";
 
@@ -130,6 +136,8 @@ $(document).ready(function () {
             // For Loop to Go Through Number of Search Results
             for (var i = 0; i < numberOfResults; i++) {
 
+                recipeResults.push(response.hits[i]);
+
                 // Name of Dish
                 console.log(response.hits[i].recipe.label);
 
@@ -148,12 +156,15 @@ $(document).ready(function () {
 
                 // URL for recipe
                 console.log(response.hits[i].recipe.url);
-
-                recipeResults.push(response);
             }
 
             // Add results to local storage
             localStorage.setItem("recipeResults", JSON.stringify(recipeResults));
+
+            
+
+            // Continue to next window
+            window.location.replace("select-recipe.html");
         });
     });
 });

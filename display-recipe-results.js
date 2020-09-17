@@ -3,24 +3,37 @@
 var recipeResults = JSON.parse(localStorage.getItem("recipeResults"));
 
 
+// Cycle Through Results and Display Them
 
-// Displaying Recipe Results
+for (var i = 0; i < recipeResults.length; i++) {
 
-var newResult = $("<div class='card rounded shadow-sm newResult'></div>");
+    // Displaying Recipe Results
 
-var newResultImg = $("<img src=''>");
+    var newResult = $("<div class='card rounded shadow-sm newResult' id=" + i + "></div>");
 
-var newResultName = $("<p></p>");
+    var newResultImg = $("<img src=''>");
 
-$("#recipeResults").prepend(newResult);
+    var newResultName = $("<p></p>");
 
-$(newResult).append(newResultImg);
+    $("#recipeResults").prepend(newResult);
 
-$(newResultImg).attr("src", response.hits[i].recipe.url);
+    $(newResult).append(newResultImg);
 
-$(newResultName).text(response.hits[i].recipe.label);
+    $(newResult).append(newResultName);
 
+    $(newResultImg).attr("src", recipeResults[i].recipe.image);
 
+    $(newResultName).text(recipeResults[i].recipe.label);
+}
 
+$(".newResult").on("click", function(event) { 
+    event.preventDefault();
 
+    var recipeNumber = this.id;
 
+    var selectedRecipe = [];
+
+    selectedRecipe.push(recipeResults[recipeNumber]);
+
+    localStorage.setItem("selectedRecipe", JSON.stringify(selectedRecipe));
+});
