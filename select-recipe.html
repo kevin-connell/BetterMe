@@ -21,23 +21,27 @@
         </nav>
         <h3>Select your recipe</h3>
         <p>From the following options, select the meal that interests you the most, or search through our catalog. Let's get cooking!</p>
+
         <!-- Select recipe form -->
         <!-- Add search bar to form -->
-        <div class="row">
-            <div class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input type="text" id="autocomplete-input" class="autocomplete">
-                  <label for="autocomplete-input"><button class="searchBtn" type="search" name="action">Search
-                    <i class="search-icon right"></i>
-                </button>
-                </form>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <main class="container">
+            <div class="row">
+                <div class="col s12 m7">
+                    <input type="text" id="autocomplete-input" class="autocomplete">
+                    <label for="autocomplete-input"><button class="searchBtn" type="search" name="action">Search
+                      <i class="search-icon right"></i>
+                  </button>
+                  <p>
+                    <h3 id="recipeTitle">Title</h3>
+                    <p>See the full recipe at: <a id="recipeLink">source</a></p>
+                  <div class="card">
+                    <div class="card-image">
+            <div id="imageHolder"></div><img id="recipeImage">
+    </div>
+    </div>
+    </div>
+</div>
+        </main>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="script.js"></script>
         <script type="text/javascript" src="select-recipe.js"></script>
