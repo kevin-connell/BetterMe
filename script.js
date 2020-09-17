@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $(".dropdown-trigger").dropdown();
+
     function generateRecipes(){
         
         var queryURL = ""
@@ -25,7 +27,10 @@ $(document).ready(function () {
             console.log(response);
         });
     };
+
+});
     
+<<<<<<< HEAD
     GetInfoWorkout();
 
 //  ID numbers for sedentary workouts: 
@@ -48,6 +53,10 @@ $(document).ready(function () {
 
 
 
+=======
+    // GetInfoWorkout();
+    
+>>>>>>> bd7d2fa0b8d82fbc0e7697f01314c640c7a18431
     // Muscles: ID numbers for muscles
             // 1 - Biceps brachii
             // 2 - Anterior deltoid

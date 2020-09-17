@@ -4,38 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <meta class="foundation-mq">
     <title>BetterMe</title>
 </head>
 
 <body>
     <!-- Header -->
-    <nav id="navBar">
-        <h1>BetterMe</h1>
-        <class="nav-item">
-            <a class="nav-link" href="select-recipe.html"> <i class="fas fa-heart"> </i>Favorited Recipes</a> 
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">BetterMe</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">❤️️Favorites<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
     </nav>
+
     <!-- Recipe card -->
-    <main>
+
+    <main class="container">
         <div class="row">
             <div class="col s12 m7">
-              <div class="card">
-                <div class="card-image">
-        <div id="imageHolder"></div><img id="recipeImage">
-        <h3 id="recipeTitle">Title</h3>
-        <p>See the full recipe at: <a id="recipeLink">source</a></p>
-    </div>
-</div>
-</div>
-</div>
+                <div class="card">
+                    <div class="card-image">
+                        <div id="imageHolder"></div><img id="recipeImage">
+                        <h1 id="RecipeTitle">Recipe Title</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>Description</p>
+                    </div>
+                    <div class="card-action">
+                        <p>See the full recipe at: <a id="recipeLink">source</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <main class="container">
+        <div class="row">
+            <div class="col s12 m7">
+                <div class="card">
+                    <div class="card-image">
+                        <div id="exerciseImageHolder"></div><img id="exerciseImage">
+                        <h1 id="exerciseImageTitle">Workout</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>Description</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" script src="script.js"></script>
+    <script type="text/javascript" src="recipe-card.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 
 </html>
