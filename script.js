@@ -59,8 +59,6 @@ $(document).ready(function () {
     // 789 - ("name": "Jogging")
     // 807 - (name": "Handstand Pushup")
 
-
-
     // GetInfoWorkout();
 
     // Muscles: ID numbers for muscles
