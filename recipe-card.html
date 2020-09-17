@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
     <title>BetterMe</title>
 </head>
+
 <body>
     <!-- Header -->
     <nav id="navBar">
         <h1>BetterMe</h1>
         <class="nav-item">
-            <a class="nav-link" href="select-recipe.html">Your Favorited Recipes</a>
+            <a class="nav-link" href="select-recipe.html"> <i class="fas fa-heart"> </i>Favorited Recipes</a> 
     </nav>
-        
+
     <!-- Recipe card -->
-
-    <main class="container">
-    <div class="row">
-        <div class="col s12 m7">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/sample-1.jpg" div id="imageHolder" img id="recipeImage">
-              <h1 id="recipeTitle">Card Title</h1>
-            </div>
-            <div class="card-content">
-              <p>recipe text</p>
-            </div>
-            <div class="card-action">
-              <a id="recipeLink" a href="#">Click here for the full recipe</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-  </div>
-          
+    <main>
+        <div class="row">
+            <div class="col s12 m7">
+              <div class="card">
+                <div class="card-image">
+        <div id="imageHolder"></div><img id="recipeImage">
+        <h3 id="recipeTitle">Title</h3>
+        <p>See the full recipe at: <a id="recipeLink">source</a></p>
+    </div>
+</div>
+</div>
+</div>
     </main>
 
-    
-
-          
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" script src="script.js"></script>     
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" script src="script.js"></script>
 </body>
+
 </html>

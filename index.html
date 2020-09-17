@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -14,17 +14,13 @@
 </head>
 
 <body>
-    <header class="container">
-        <!-- Header -->
-        <nav id="navBar">
-            <h1>BetterMe</h1>
-            <class="nav-item">
-                <a class="nav-link" href="select-recipe.html">Your Favorited Recipes</a>
-        </nav>
-        
 
-
-    </header>
+    <!-- Header -->
+    <nav id="navBar">
+        <h1>BetterMe</h1>
+        <class="nav-item">
+            <a class="nav-link" href="select-recipe.html"> <i class="fas fa-heart"> </i>Favorited Recipes</a>
+    </nav>
 
     <!-- Mission -->
     <h2>Our Mission</h2>
@@ -33,91 +29,87 @@
         food preferences and restrictions. To help you take your wellness to the next level, we also provide a tailored
         workout with each meal selected.
     </p>
-
     <h5>A better you starts with BetterMe</h5>
-
-    <!-- Search and diet restriction form -->
+    <br>
+    <!-- Starting form -->
+    <!-- Checkbox options for diet -->
     <main class="container">
         <div class="row">
             <div class="col-md-12">
-                <form id="dietRestrictions" <div id="searchBtn">
-            </div>
-            <div id="dietPreferences"></div>
-            <div id="activityLevel"></div>
-        </div>
-        </form>
-        </div>
-        </div>
+                <div class="dietPreferences">
+                    <h4>Select your diet preferences</h4>
+                    <form action="#">
+                        <p>
+                            <input type="checkbox" class="glutenFree" /> 
+                            <span>Gluten-Free</span> <i class="fas fa-bread-slice"></i>
+                            </label>
+                        </p>
+                        <p>
+                        <p>
+                        <p>
+                            <input type="checkbox" class="vegetarian" />
+                            <span>Vegetarian</span> <i class="fas fa-carrot"></i>
+                            </label>
+                        </p>
+                        <p>
+                        <p>
+                        <p>
+                            <input type="checkbox" class="vegan" />
+                            <span>Vegan</span> <i class="fas fa-seedling"></i>
+                            </label>
+                        </p>
+                        <p>
+                        <p>
+                        <p>
+                            <label>
+                                <input type="checkbox" class="peanutFree" />
+                                <span>Peanut Free</span> <i class="fas fa-utensils"></i>
+                            </label>
+                        </p>
+                        <p>
+                        <p>
+                            <input type="checkbox" class="shellfishFree" />
+                            <span>Shellfish Free</span> <i class="fas fa-fish"></i>
+                            </label>
+                        </p>
+                </div>
+                </form>
+                <br>
+
+                <!-- Checkbox options for activity level-->
+                <h4>Select your activity level</h4>
+                <form action="#">
+                    <p>
+                        <input type="checkbox" class="sedentary" />
+                        <span>Sedentary</span>
+                        <i class="fas fa-couch"></i>
+                    <p><small>You tend to spend much time seated with little to no exercise</small></p>
+                    <br>
+                    </label>
+                    </p>
+                    <p>
+                        <input type="checkbox" class="moderate" /> 
+                        <span>Moderate</span>
+                        <i class="fas fa-walking"></i>
+                    <p><small>You occasionally are on your feet and exercise 1-3 days a week</small></p>
+                    <br>
+                    </label>
+                    </p>
+                    <p>
+                        <input type="checkbox" class="active" />
+                        <span>Active</span>
+                        <i class="fas fa-running"></i>
+                    <p><small>You are always on your feet and exercise 5-7 days a week</small></p>
+                    <br>
+                    </label>
+                    </p>
+                </form>
+                <button class="searchBtn" type="search" name="action">Search
+                    <i class="search-icon right"></i>
+                </button>
+                </form>
     </main>
 
-<!-- Checkbox options for diet -->
-    <h5>Select your diet preferences</h5>
-    <form action="#">
-        <p>
-            <input type="checkbox" class="glutenFree" />
-            <span>Gluten-Free</span>
-          </label>
-        </p>
-        <p>
-    <p>
-        <p>
-            <input type="checkbox" class="vegetarian" />
-            <span>Vegetarian</span>
-          </label>
-        </p>
-        <p>
-    <p>
-        <p>
-            <input type="checkbox" class="vegan" />
-            <span>Vegan</span>
-          </label>
-        </p>
-        <p>
-    <p>
-        
-        <p>
-          <label>
-            <input type="checkbox" class="peanutFree" />
-            <span>Peanut Free</span>
-          </label>
-        </p>
-        <p>
-    <p>
-        <input type="checkbox" class="shellfishFree" />
-        <span>Shellfish Free</span>
-      </label>
-    </p>
-</form>
-<br>
-<!-- Checkbox options for activity level-->
-<h5>Select your activity level</h5>
-<form action="#">
-    <p>
-        <input type="checkbox" class="sedentary" />
-        <span>Sedentary</span>
-      </label>
-    </p>
-    <p>
-<p>
-    <p>
-        <input type="checkbox" class="moderate" />
-        <span>Moderate</span>
-      </label>
-    </p>
-    <p>
-<p>
-    <p>
-        <input type="checkbox" class="active" />
-        <span>Active</span>
-      </label>
-    </p>
-</form>
-<br>
-<button class="searchBtn" type="search" name="action">Search
-    <i class="search-icon right"></i>
-</button>
-
-    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
