@@ -38,25 +38,45 @@ $(document).ready(function () {
         return Object.keys(newObj);
     }
 
-    var labelID = localStorage.getItem("selectedRecipe")
+    // Getting Selected Recipe From Storage\
 
-    var queryURL = "https://api.edamam.com/search?q=" + labelID + "&app_id=a9f85e6a&app_key=77f6e24e315d52d60bcbb1e1b428e579&from=0&to=1"
+    var selectedRecipe = JSON.parse(localStorage.getItem("selectedRecipe"));
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function (response) {
-        var title = response.hits[0].recipe.label
-        var image = response.hits[0].recipe.image
-        var ingrdients = response.hits[0].recipe.ingredientLines
-        var caloriesPerServing = (response.hit[0].calories / response.hit[0].yeild)
-        var source = response.hit[0].source
-        var url = response.hit[0].url
+    console.log(selectedRecipe);
 
-        $("#recipeImage").attr("src" , image)
-        $("#recipeImage").attr("alt" , title + "image")
-        $("#recipeTitle").text(tabel)
-        $("#recipeLink").attr("href" , url)
-        $("#recipeLink").text(source)
-    });
+
+    // Variables for Selected Recipe
+
+    var title = selectedRecipe[0].recipe.label;
+    var image = selectedRecipe[0].recipe.image;
+    var ingredients = selectedRecipe[0].recipe.ingredientLines;
+    var calories = selectedRecipe[0].recipe.calories;
+    var servings = selectedRecipe[0].recipe.yield;
+
+    var source = selectedRecipe[0].recipe.source;
+    var url = selectedRecipe[0].recipe.url;
+
+    $("#recipeImage").attr("src", image);
+    $("#recipeImage").attr("alt", title + "image");
+    $("#recipeTitle").text(title);
+
+    $("#recipeCalories").text("Calories: " + calories.toFixed(0));
+    $("#recipeServings").text("Makes " + servings + " servings.");
+
+    $("#recipeCaloriesPerServing").text("Calories per serving: " + (calories / servings).toFixed(0));
+
+    for (i = 0; i < ingredients.length; i++){
+
+        var newIngredient = $("<li></li>");
+
+        $("#ingredients").append(newIngredient);
+
+        $(newIngredient).text(ingredients[i]);
+    }
+
+    $("#recipeLink").attr("href", url);
+    $("#recipeLink").text(source);
+
+
+
 });
