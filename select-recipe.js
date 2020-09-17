@@ -163,7 +163,7 @@ $(document).ready(function () {
 
             
 
-            // Continue to next window
+            // Continue to next window. Contains recipe results
             window.location.replace("select-recipe.html");
         });
     });
