@@ -16,30 +16,59 @@
 
 <body>
     <!-- Header -->
-    <nav id="navBar">
-        <h1>BetterMe</h1>
-        <class="nav-item">
-            <a class="nav-link" href="select-recipe.html">Your Favorited Recipes</a>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">BetterMe</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">❤️️Favorites<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <div id="imageHolder"></div><img id="recipeImage">
+    <!-- Recipe card -->
 
-        <h1 id="recipeTitle">Title</h1>
-
-        <p id="recipeCalories"></p>
-        <p id="recipeServings"></p>
-        <p id="recipeCaloriesPerServing"></p>
-        
-        <p>Ingredients</p>
-
-        <ol id="ingredients"></ol>
-
-        <p>See the full recipe at: <a id="recipeLink">source</a></p>
-
+    <main class="container">
+        <div class="row">
+            <div class="col s12 m7">
+                <div class="card">
+                    <div class="card-image">
+                        <div id="imageHolder"></div><img id="recipeImage">
+                        <h1 id="recipeTitle">Recipe Title</h1>
+                    </div>
+                    <div class="card-content">
+                        <p id="recipeCalories"></p>
+                        <p id="recipeServings"></p>
+                        <p id="recipeCaloriesPerServing"></p>
+                        
+                        <p>Ingredients</p>
+                
+                        <ol id="ingredients"></ol>
+                
+                        <p>See the full recipe at: <a id="recipeLink">source</a></p>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- Recipe card -->
+        
+    <main class="container">
+        <div class="row">
+            <div class="col s12 m7">
+                <div class="card">
+                    <div class="card-image">
+                        <div id="exerciseImageHolder"></div><img id="exerciseImage">
+                        <h1 id="exerciseImageTitle">Workout</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>Description</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="recipe-card.js"></script>

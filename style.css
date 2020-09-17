@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+
+ #navBar {
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+     color: #98d083;
+     background-color: #71a0a5;
+     padding: 15px;
+     
+ }
+ 
+ .card {
+     
+ }
+ 
+ #recipeImage{
+     width: 100%;
+     height: 600px;
+     object-fit: cover;
+ }
+ 
+ 
+ 
+=======
 body {
     background-color: #fed9ca;
 }
@@ -39,3 +63,4 @@ h2 {
     height: 600px;
     object-fit: cover;
 }
+>>>>>>> bd7d2fa0b8d82fbc0e7697f01314c640c7a18431
