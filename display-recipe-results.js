@@ -36,4 +36,7 @@ $(".newResult").on("click", function(event) {
     selectedRecipe.push(recipeResults[recipeNumber]);
 
     localStorage.setItem("selectedRecipe", JSON.stringify(selectedRecipe));
+
+    // Continue to next window. Contains recipe results
+    window.location.replace("recipe-card.html");
 });
