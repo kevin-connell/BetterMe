@@ -2,36 +2,67 @@ $(document).ready(function () {
 
     $(".dropdown-trigger").dropdown();
 
-    function generateRecipes(){
-        
-        var queryURL = ""
-    
-    
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function (response) {
-            console.log(response);
-        });
-    }
-    
-    function GetInfoWorkout() {
-    
-        var queryURL = "https://wger.de/api/v2/exercise/?muscles=1&equipment=3"
-    
-    
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function (response) {
-            console.log(response);
-        });
-    };
+    var favorites = JSON.parse(localStorage.getItem("favoritesList")) || ["Chicken", "Mashed Potatoes" , "Pea Soup"]
 
+    renderFavorites()
+
+    function renderFavorites() {
+
+        $("#dropdown1").empty()
+
+        for (let i = 0; i < favorites.length; i++) {
+            newLi = $("<li>")
+            newAtag = $("<a>")
+            $(newAtag).text(favorites[i])
+            $(newLi).append(newAtag)
+            $("#dropdown1").append(newLi)
+        }
+    }
+
+    $("#dropdown1").on("click" , function (event){
+        console.log($(event.target).text())
+        localStorage.setItem("clickedFavorite" , $(event.target).text())
+        window.location.href = "recipe-card.html"
+    })
 });
     
-    // GetInfoWorkout();
+//     function GetInfoWorkout() {
     
+//         var queryURL = "https://wger.de/api/v2/exercise/?muscles=1&equipment=3"
+    
+    
+//         $.ajax({
+//             url: queryURL,
+//             method: "GET"
+//         }).then(function (response) {
+//             console.log(response);
+//         });
+//     };
+
+// });
+    
+    // GetInfoWorkout();
+
+//  ID numbers for sedentary workouts: 
+     
+// 470 - ("Crossover Reverse Lunge")
+ // 607 - ("name: "Ankle Taps")
+// 604 - ("name: "Bodyweight Squats")
+
+    // Moderate activity level use light weights
+
+    // 795 - ("name": "Squat Thrust")
+    // 548 - ("name": "Wall Slides")
+    // 341 - ("name": "Body-Ups")
+
+    // Active activity level use heavy weight workouts
+
+    // 814 - ("name": "Box Jump")
+    // 206 - ("name": "Decline Pushups")
+    // 393 - ("name": Upper Body")
+
+
+
     // Muscles: ID numbers for muscles
             // 1 - Biceps brachii
             // 2 - Anterior deltoid

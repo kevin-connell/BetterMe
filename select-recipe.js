@@ -1,5 +1,30 @@
 $(document).ready(function () {
 
+    $(".dropdown-trigger").dropdown();
+
+    var favorites = JSON.parse(localStorage.getItem("favoritesList")) || ["Chicken", "Mashed Potatoes" , "Pea Soup"]
+
+    renderFavorites()
+
+    function renderFavorites() {
+
+        $("#dropdown1").empty()
+
+        for (let i = 0; i < favorites.length; i++) {
+            newLi = $("<li>")
+            newAtag = $("<a>")
+            $(newAtag).text(favorites[i])
+            $(newLi).append(newAtag)
+            $("#dropdown1").append(newLi)
+        }
+    }
+
+    $("#dropdown1").on("click" , function (event){
+        console.log($(event.target).text())
+        localStorage.setItem("clickedFavorite" , $(event.target).text())
+        window.location.href = "recipe-card.html"
+    })
+
     // Clear Previous Selected Recipe if Any
     
     var selectedRecipe = [];
