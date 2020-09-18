@@ -26,7 +26,7 @@ for (var i = 0; i < recipeResults.length; i++) {
     $(newResultName).text(recipeResults[i].recipe.label);
 }
 
-$(".newResult").on("click", function (event) {
+$(".newResult").on("click", function(event) { 
     event.preventDefault();
 
     var recipeNumber = this.id;
@@ -40,6 +40,3 @@ $(".newResult").on("click", function (event) {
     // Continue to next window. Contains recipe results
     window.location.replace("recipe-card.html");
 });
-
-
-// Workout results

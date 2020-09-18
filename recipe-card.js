@@ -1,37 +1,30 @@
 $(document).ready(function () {
 
-    $(".dropdown-trigger").dropdown();
+    var favorites = JSON.parse(localStorage.getItem("favorites list")) || []
 
-    var favorites = JSON.parse(localStorage.getItem("favoritesList")) || ["Chicken", "Mashed Potatoes" , "Pea Soup"]
-
-    var favorites = JSON.parse(localStorage.getItem("favorites list")) || ["Roasted Chicken" , "Mashed Potatoes"];
-
-    renderFavorites();
+    renderFavorites()
 
     function renderFavorites() {
 
-        $("#dropdown1").empty()
+        $("#favoriteDropDown").empty()
 
         for (let i = 0; i < favorites.length; i++) {
             newLi = $("<li>")
-            newAtag = $("<a>")
-            $(newAtag).text(favorites[i])
-            $(newLi).append(newAtag)
-            $("#dropdown1").append(newLi)
+            newLi.text(favorites[i])
+            $("#favoriteDropDown").prepend(newLi)
         }
     }
 
-    $("#dropdown1").on("click" , function (event){
-        console.log($(event.target).text())
-        localStorage.setItem("clickedFavorite" , $(event.target).text())
-        window.location.href = "recipe-card.html"
-    })
+    function addFavorite() {
 
-    function addFavorite(x) {
-        favorites.unshift(x)
+        favorites.unshift($("#recipeTitle").text())
+
         favorites = noDuplicates(favorites)
-        favorites.splice(5);
-        localStorage.setItem("favoritesList", JSON.stringify(favorites));
+
+        favorites.splice(6);
+
+        localStorage.setItem("favorites list", JSON.stringify(favorites));
+
         renderFavorites()
     }
 
