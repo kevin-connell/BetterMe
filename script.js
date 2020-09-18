@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     var favorites = JSON.parse(localStorage.getItem("favoritesList")) || ["Chicken", "Mashed Potatoes" , "Pea Soup"]
 
-    renderFavorites()
+    renderFavorites();
 
     function renderFavorites() {
 
@@ -24,45 +24,35 @@ $(document).ready(function () {
         localStorage.setItem("clickedFavorite" , $(event.target).text())
         window.location.href = "recipe-card.html"
     })
+
+    function generateRecipes() {
+
+        var queryURL = ""
+
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+        });
+    }
+
+    function GetInfoWorkout() {
+    
+        var queryURL = "https://wger.de/api/v2/exercise/" + exerciseID;
+    
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+        });
+    };
+
+    // GetInfoWorkout();
+
 });
-    
-//     function GetInfoWorkout() {
-    
-//         var queryURL = "https://wger.de/api/v2/exercise/?muscles=1&equipment=3"
-    
-    
-//         $.ajax({
-//             url: queryURL,
-//             method: "GET"
-//         }).then(function (response) {
-//             console.log(response);
-//         });
-//     };
-
-// });
-    
-    // GetInfoWorkout();
-
-//  ID numbers for sedentary workouts: 
-     
-// 470 - ("Crossover Reverse Lunge")
- // 607 - ("name: "Ankle Taps")
-// 604 - ("name: "Bodyweight Squats")
-
-    // Moderate activity level use light weights
-
-    // 795 - ("name": "Squat Thrust")
-    // 548 - ("name": "Wall Slides")
-    // 341 - ("name": "Body-Ups")
-
-    // Active activity level use heavy weight workouts
-
-    // 814 - ("name": "Box Jump")
-    // 206 - ("name": "Decline Pushups")
-    // 393 - ("name": Upper Body")
-    // GetInfoWorkout();
-
-// });
 
 // GetInfoWorkout();
 

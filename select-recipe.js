@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     var favorites = JSON.parse(localStorage.getItem("favoritesList")) || ["Chicken", "Mashed Potatoes" , "Pea Soup"]
 
-    renderFavorites()
+    renderFavorites();
 
     function renderFavorites() {
 
@@ -132,7 +132,7 @@ $(document).ready(function () {
 
     // Function to Run Edamam API
 
-    $("#recipeSearchButton").on("click", function (event) {
+    $(".recipeSearchButton").on("click", function (event) {
         event.preventDefault();
 
         // Create/Reset recipe array to store recipe results
@@ -142,7 +142,7 @@ $(document).ready(function () {
         // Search Term Variables
 
         var searchTerm = $("#recipeSearch").val().trim();;
-        var numberOfResults = "10";
+        var numberOfResults = "20";
         var calorieMin = "0";
         var calorieMax = "2000";
 
@@ -217,8 +217,6 @@ $(document).ready(function () {
                 
                 localStorage.setItem("selectedWorkoutIntesity", selectedWorkoutIntesity);
             }
-
-
 
             // Continue to next window. Contains recipe results
             window.location.replace("select-recipe.html");

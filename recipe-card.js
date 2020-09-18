@@ -2,9 +2,7 @@ $(document).ready(function () {
 
     $(".dropdown-trigger").dropdown();
 
-    var favorites = JSON.parse(localStorage.getItem("favoritesList")) || ["Chicken", "Mashed Potatoes" , "Pea Soup"]
-
-    var favorites = JSON.parse(localStorage.getItem("favorites list")) || ["Roasted Chicken" , "Mashed Potatoes"];
+    var favorites = JSON.parse(localStorage.getItem("favoritesList")) || ["Chicken", "Mashed Potatoes", "Pea Soup"]
 
     renderFavorites();
 
@@ -21,9 +19,9 @@ $(document).ready(function () {
         }
     }
 
-    $("#dropdown1").on("click" , function (event){
+    $("#dropdown1").on("click", function (event) {
         console.log($(event.target).text())
-        localStorage.setItem("clickedFavorite" , $(event.target).text())
+        localStorage.setItem("clickedFavorite", $(event.target).text())
         window.location.href = "recipe-card.html"
     })
 
@@ -45,10 +43,9 @@ $(document).ready(function () {
         return Object.keys(newObj);
     }
 
-<<<<<<< HEAD
     clickedFav = localStorage.getItem("clickedFavorite")
 
-    if (clickedFav !== "no" || !clickedFav) {
+    if (clickedFav !== "no" && clickedFav) {
 
         clickedFav = localStorage.getItem("clickedFavorite")
 
@@ -67,7 +64,7 @@ $(document).ready(function () {
 
             showSelected(clicked)
 
-            localStorage.setItem("clickedFavorite" , "no")
+            localStorage.setItem("clickedFavorite", "no")
         })
 
     } else {
@@ -79,19 +76,18 @@ $(document).ready(function () {
         showSelected(selectedRecipe)
     };
 
-    function showSelected(x) {
 
-        // Variables for Selected Recipe
-        console.log(x);
+    // Variables for Selected Recipe
+    function showSelected(recipe) {
 
-        var title = x[0].recipe.label;
-        var image = x[0].recipe.image;
-        var ingredients = x[0].recipe.ingredientLines;
-        var calories = x[0].recipe.calories;
-        var servings = x[0].recipe.yield;
+        var title = recipe[0].recipe.label;
+        var image = recipe[0].recipe.image;
+        var ingredients = recipe[0].recipe.ingredientLines;
+        var calories = recipe[0].recipe.calories;
+        var servings = recipe[0].recipe.yield;
 
-        var source = x[0].recipe.source;
-        var url = x[0].recipe.url;
+        var source = recipe[0].recipe.source;
+        var url = recipe[0].recipe.url;
 
         $("#recipeImage").attr("src", image);
         $("#recipeImage").attr("alt", title + "image");
@@ -114,111 +110,80 @@ $(document).ready(function () {
         $("#recipeLink").attr("href", url);
         $("#recipeLink").text(source);
 
-    }
-
-    //     $("#recipeImage").attr("src" , image)
-    //     $("#recipeImage").attr("alt" , title + "image")
-    //     $("#recipeTitle").text(tabel)
-    //     $("#recipeLink").attr("href" , url)
-    //     $("#recipeLink").text(source)
-    // });
-=======
-    // Getting Selected Recipe From Storage\
-
-    var selectedRecipe = JSON.parse(localStorage.getItem("selectedRecipe"));
-
-    console.log(selectedRecipe);
 
 
-    // Variables for Selected Recipe
+        // Workout IDs
 
-    var title = selectedRecipe[0].recipe.label;
-    var image = selectedRecipe[0].recipe.image;
-    var ingredients = selectedRecipe[0].recipe.ingredientLines;
-    var calories = selectedRecipe[0].recipe.calories;
-    var servings = selectedRecipe[0].recipe.yield;
+        var sedentaryWorkoutID = ["470", "607", "604"];
+        var moderateWorkoutID = ["795", "548", "341"];
+        var activeWorkoutID = ["814", "206", "393"];
 
-    var source = selectedRecipe[0].recipe.source;
-    var url = selectedRecipe[0].recipe.url;
+        // Select Workout Intensity Level
 
-    $("#recipeImage").attr("src", image);
-    $("#recipeImage").attr("alt", title + "image");
-    $("#recipeTitle").text(title);
+        var exerciseID;
 
-    $("#recipeCalories").text("Calories: " + calories.toFixed(0));
-    $("#recipeServings").text("Makes " + servings + " servings.");
+        var selectedWorkoutIntesity = localStorage.getItem("selectedWorkoutIntesity") || "sedentary";
 
-    $("#recipeCaloriesPerServing").text("Calories per serving: " + (calories / servings).toFixed(0));
+        if (selectedWorkoutIntesity == "sedentary") {
 
-    for (i = 0; i < ingredients.length; i++) {
-
-        var newIngredient = $("<li></li>");
-
-        $("#ingredients").append(newIngredient);
-
-        $(newIngredient).text(ingredients[i]);
-    }
-
-    $("#recipeLink").attr("href", url);
-    $("#recipeLink").text(source);
-
-
-
-    // Workout IDs
-
-    var sedentaryWorkoutID = ["470", "607", "604"];
-    var moderateWorkoutID = ["795", "548", "341"];
-    var activeWorkoutID = ["814", "206", "393"];
-    
-    // Select Workout Intensity Level
-
-    var exerciseID;
-
-    var selectedWorkoutIntesity = localStorage.getItem("selectedWorkoutIntesity");
-
-    if (selectedWorkoutIntesity == "sedentary") {
-
-        exerciseID = sedentaryWorkoutID[Math.floor(Math.random() * 3)];
-    }
-
-    else if (selectedWorkoutIntesity == "moderate") {
-        
-        exerciseID = moderateWorkoutID[Math.floor(Math.random() * 3)];
-    }
-
-    else if (selectedWorkoutIntesity == "active") {
-        
-        exerciseID = activeWorkoutID[Math.floor(Math.random() * 3)];
-    }
-
-    else if (selectedWorkoutIntesity == "none selected") {
-        
-        var random = Math.floor(Math.random() * 3);
-
-        if (random = 0){
             exerciseID = sedentaryWorkoutID[Math.floor(Math.random() * 3)];
         }
 
-        else if (random = 1){
+        else if (selectedWorkoutIntesity == "moderate") {
+
             exerciseID = moderateWorkoutID[Math.floor(Math.random() * 3)];
         }
 
-        else if (random = 2){
+        else if (selectedWorkoutIntesity == "active") {
+
             exerciseID = activeWorkoutID[Math.floor(Math.random() * 3)];
         }
-    }
-    
-    // Get Workout From API
 
-    var queryURL = "https://wger.de/api/v2/exercise/" + exerciseID;
+        else if (selectedWorkoutIntesity == "none selected") {
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response);
+            var random = Math.floor(Math.random() * 3);
 
-        $("#workoutDescription").text(response.description);
+            if (random = 0) {
+                exerciseID = sedentaryWorkoutID[Math.floor(Math.random() * 3)];
+            }
+
+            else if (random = 1) {
+                exerciseID = moderateWorkoutID[Math.floor(Math.random() * 3)];
+            }
+
+            else if (random = 2) {
+                exerciseID = activeWorkoutID[Math.floor(Math.random() * 3)];
+            }
+        }
+
+        // Get Workout From API
+
+        var queryURL = "https://wger.de/api/v2/exercise/" + exerciseID;
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+
+            $("#workoutDescription").html(response.description);
+            $("#workoutTitle").text(response.name);
+        });
+    };
+
+    // Add to Favorites
+
+    $("#addToFavorites").on("click", function (event) {
+        event.preventDefault();
+
+        // If star is unchecked (NOT favorited), on click favorite and switch star icon to filled
+        if ($("#star").hasClass("far")) {
+            $(this).find($("#star")).removeClass('far fa-star').addClass('fas fa-star');
+        }
+
+        // If star is checked (FAVORITED), on click UNfavorite and switch star icon to empty
+        else if ($("#star").hasClass("fas")) {
+            $(this).find($("#star")).removeClass('fas fa-star').addClass('far fa-star');
+        }
     });
->>>>>>> 2057d400e7739851d96ad05a2fb6662014f5b0eb
 });
