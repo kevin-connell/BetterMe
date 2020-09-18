@@ -33,6 +33,15 @@ $(document).ready(function () {
         renderFavorites()
     }
 
+    function removeFavorite(x) {
+        var removeIndex = favorites.indexOf(x)
+        if (removeIndex > -1) {
+            favorites.splice(removeIndex, 1)
+            localStorage.setItem("favoritesList", JSON.stringify(favorites));
+            renderFavorites()
+        }
+    }
+
     function noDuplicates(x) {
         newObj = {};
         x.forEach(function (item) {
@@ -179,11 +188,13 @@ $(document).ready(function () {
         // If star is unchecked (NOT favorited), on click favorite and switch star icon to filled
         if ($("#star").hasClass("far")) {
             $(this).find($("#star")).removeClass('far fa-star').addClass('fas fa-star');
+            addFavorite($("#recipeTitle").text())
         }
 
         // If star is checked (FAVORITED), on click UNfavorite and switch star icon to empty
         else if ($("#star").hasClass("fas")) {
             $(this).find($("#star")).removeClass('fas fa-star').addClass('far fa-star');
+            removeFavorite($("#recipeTitle").text())
         }
     });
 });
