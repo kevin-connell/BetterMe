@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $(".dropdown-trigger").dropdown();
 
-    var favorites = JSON.parse(localStorage.getItem("favoritesList")) || ["Chicken", "Mashed Potatoes" , "Pea Soup"]
+    var favorites = JSON.parse(localStorage.getItem("favoritesList")) || ["Chicken", "Mashed Potatoes", "Pea Soup"]
 
     renderFavorites();
 
@@ -19,9 +19,9 @@ $(document).ready(function () {
         }
     }
 
-    $("#dropdown1").on("click" , function (event){
+    $("#dropdown1").on("click", function (event) {
         console.log($(event.target).text())
-        localStorage.setItem("clickedFavorite" , $(event.target).text())
+        localStorage.setItem("clickedFavorite", $(event.target).text())
         window.location.href = "recipe-card.html"
     })
 
@@ -64,7 +64,7 @@ $(document).ready(function () {
 
             showSelected(clicked)
 
-            localStorage.setItem("clickedFavorite" , "no")
+            localStorage.setItem("clickedFavorite", "no")
         })
 
     } else {
@@ -79,7 +79,7 @@ $(document).ready(function () {
 
     // Variables for Selected Recipe
     function showSelected(recipe) {
-        
+
         var title = recipe[0].recipe.label;
         var image = recipe[0].recipe.image;
         var ingredients = recipe[0].recipe.ingredientLines;
@@ -117,12 +117,12 @@ $(document).ready(function () {
         var sedentaryWorkoutID = ["470", "607", "604"];
         var moderateWorkoutID = ["795", "548", "341"];
         var activeWorkoutID = ["814", "206", "393"];
-        
+
         // Select Workout Intensity Level
 
         var exerciseID;
 
-        var selectedWorkoutIntesity = localStorage.getItem("selectedWorkoutIntesity")  || "sedentary";
+        var selectedWorkoutIntesity = localStorage.getItem("selectedWorkoutIntesity") || "sedentary";
 
         if (selectedWorkoutIntesity == "sedentary") {
 
@@ -130,32 +130,32 @@ $(document).ready(function () {
         }
 
         else if (selectedWorkoutIntesity == "moderate") {
-            
+
             exerciseID = moderateWorkoutID[Math.floor(Math.random() * 3)];
         }
 
         else if (selectedWorkoutIntesity == "active") {
-            
+
             exerciseID = activeWorkoutID[Math.floor(Math.random() * 3)];
         }
 
         else if (selectedWorkoutIntesity == "none selected") {
-            
+
             var random = Math.floor(Math.random() * 3);
 
-            if (random = 0){
+            if (random = 0) {
                 exerciseID = sedentaryWorkoutID[Math.floor(Math.random() * 3)];
             }
 
-            else if (random = 1){
+            else if (random = 1) {
                 exerciseID = moderateWorkoutID[Math.floor(Math.random() * 3)];
             }
 
-            else if (random = 2){
+            else if (random = 2) {
                 exerciseID = activeWorkoutID[Math.floor(Math.random() * 3)];
             }
         }
-        
+
         // Get Workout From API
 
         var queryURL = "https://wger.de/api/v2/exercise/" + exerciseID;
@@ -170,4 +170,20 @@ $(document).ready(function () {
             $("#workoutTitle").text(response.name);
         });
     };
+
+    // Add to Favorites
+
+    $("#addToFavorites").on("click", function (event) {
+        event.preventDefault();
+
+        // If star is unchecked (NOT favorited), on click favorite and switch star icon to filled
+        if ($("#star").hasClass("far")) {
+            $(this).find($("#star")).removeClass('far fa-star').addClass('fas fa-star');
+        }
+
+        // If star is checked (FAVORITED), on click UNfavorite and switch star icon to empty
+        else if ($("#star").hasClass("fas")) {
+            $(this).find($("#star")).removeClass('fas fa-star').addClass('far fa-star');
+        }
+    });
 });
