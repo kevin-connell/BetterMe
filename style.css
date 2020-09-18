@@ -1,29 +1,5 @@
-<<<<<<< HEAD
-
- #navBar {
-     text-align: center;
-     font-family: 'Times New Roman', Times, serif;
-     color: #98d083;
-     background-color: #71a0a5;
-     padding: 15px;
-     
- }
- 
- .card {
-     
- }
- 
- #recipeImage{
-     width: 100%;
-     height: 600px;
-     object-fit: cover;
- }
- 
- 
- 
-=======
 body {
-    background-color: #fed9ca;
+    background-color: #f2f2f2;
 }
 
 #navBar {
@@ -50,12 +26,6 @@ h2 {
     font-size: 54px;
 }
 
-.paragraph-1 {
-    text-align: center;
-    color: #59a985;
-    font-size: 25px;
-
-}
 
 
 #recipeImage {
@@ -63,4 +33,57 @@ h2 {
     height: 600px;
     object-fit: cover;
 }
->>>>>>> bd7d2fa0b8d82fbc0e7697f01314c640c7a18431
+
+.nav-wrapper {
+    background-color: rgb(160, 190, 126);
+}
+
+.brand-logo {}
+
+.paragragh-1 {
+    font-family: 'Marcellus SC', serif;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #6b8c42;
+    font-size: 30px;
+    margin-left: 1px;
+}
+
+h5 {
+    font-family: 'Marcellus SC', serif;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #6b8c42;
+    font-size: 35px;
+}
+
+.dropdown-trigger {
+    font-family: 'Marcellus SC', serif;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #6b8c42;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: 'Marcellus SC', serif;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #6b8c42;
+    font-size: 45px;
+    text-align: center;
+}
+
+h6 {
+    text-align: center;
+    color: #6b8c42;
+    font-family: 'Marcellus SC', serif;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 35px;
+
+}
+
+.veg-pic {
+    position: absolute;
+    width: 45%;
+    float: center;
+    right: 45px;
+    margin-top: 10%;
+
+}
