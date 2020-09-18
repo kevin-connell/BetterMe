@@ -17,9 +17,9 @@ for (var i = 0; i < recipeResults.length; i++) {
 
     $("#recipeResults").prepend(newResult);
 
-    $(newResult).append(newResultImg);
-
     $(newResult).append(newResultName);
+
+    $(newResult).append(newResultImg);
 
     $(newResultImg).attr("src", recipeResults[i].recipe.image);
 
@@ -43,31 +43,3 @@ $(".newResult").on("click", function (event) {
 
 
 // Workout results
-
-// Workouts for Sedentary
-var sedentaryWorkouts = ["Crossover Reverse Lunge", "Ankle Taps", "Bodyweight Squats", "Bear Walk", "Fire Hydrant"];
-// Workout IDs:
-// 470 
-// 607 
-// 604 
-// 307
-// 480 
-
-// Workouts for Moderate
-
-var moderateWorkouts = ["Squat Thrust", "Wall Slides", "Body-Ups", "Dips", "Cycling"];
-// Workout IDs:
-// 795 
-// 548 
-// 341
-// 781 
-// 806 
-
-// Workouts for Active 
-var activeWorkouts = ["Box Jump", "Decline Pushups", "Isometric Wipers", "Jogging","Handstand Pushup"];
-// Workout IDS:
-// 814 
-// 206 
-// 338 
-// 789 
-// 807 

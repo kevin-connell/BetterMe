@@ -16,10 +16,9 @@ $(document).ready(function () {
     }
 
     function GetInfoWorkout() {
-
-        var queryURL = "https://wger.de/api/v2/exercise/?muscles=1&equipment=3"
-
-
+    
+        var queryURL = "https://wger.de/api/v2/exercise/" + exerciseID;
+    
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -27,6 +26,8 @@ $(document).ready(function () {
             console.log(response);
         });
     };
+
+    // GetInfoWorkout();
 
 });
 
@@ -60,7 +61,11 @@ $(document).ready(function () {
     // 807 - (name": "Handstand Pushup")
 
     // GetInfoWorkout();
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 38f36cc04be569531877b6e653bbbcfcbd6f872f
     // Muscles: ID numbers for muscles
             // 1 - Biceps brachii
             // 2 - Anterior deltoid
