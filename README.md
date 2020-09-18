@@ -17,14 +17,14 @@ The user can search for or filter based on his or her dieting restrictions and r
 The user can favorite recipes and revisit those meals at any time using the favorite recipes drop down menu. 
 
 ## Functionality 
-![betterMe gif]()
+![betterMe gif](./Assets/Images/betterMe.gif)
 
 ## Screenshots 
 
-![betterMe home]()
-![betterMe select recipe]()
-![betterMe selected card]()
-![betterMe favorite]()
+![betterMe home](./Assets/Images/home-page.png)
+![betterMe select recipe](./Assets/Images/select-recipe.png)
+![betterMe selected card](./Assets/Images/recipe-work-cards.png)
+![betterMe favorite](./Assets/Images/favorite-recipe.png)
 
 
 ## Built With
