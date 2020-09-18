@@ -2,11 +2,11 @@ $(document).ready(function () {
 
     $(".dropdown-trigger").dropdown();
 
-    function generateRecipes(){
-        
+    function generateRecipes() {
+
         var queryURL = ""
-    
-    
+
+
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -14,7 +14,7 @@ $(document).ready(function () {
             console.log(response);
         });
     }
-    
+
     function GetInfoWorkout() {
     
         var queryURL = "https://wger.de/api/v2/exercise/" + exerciseID;
@@ -31,28 +31,41 @@ $(document).ready(function () {
 
 });
 
-//  ID numbers for sedentary workouts: 
-     
-// 470 - ("Crossover Reverse Lunge")
- // 607 - ("name: "Ankle Taps")
-// 604 - ("name: "Bodyweight Squats")
+// GetInfoWorkout();
 
-    // Moderate activity level use light weights
+    //  ID numbers 
+
+    // Sedentary workouts: 
+
+    // 470 - ("Crossover Reverse Lunge")
+    // 607 - ("name": "Ankle Taps")
+    // 604 - ("name": "Bodyweight Squats")
+    // 307 - ("name": "Bear Walk")
+    // 480 - ("name": "Fire Hydrant")
+
+
+    // Moderate workouts:
 
     // 795 - ("name": "Squat Thrust")
     // 548 - ("name": "Wall Slides")
     // 341 - ("name": "Body-Ups")
+    // 781 - ("name": "Dips")
+    // 806 - ("name": "Cycling")
 
-    // Active activity level use heavy weight workouts
+    // Active workouts:
 
     // 814 - ("name": "Box Jump")
     // 206 - ("name": "Decline Pushups")
-    // 393 - ("name": Upper Body")
-
-
+    // 338 - ("name": "Isometric Wipers")
+    // 789 - ("name": "Jogging")
+    // 807 - (name": "Handstand Pushup")
 
     // GetInfoWorkout();
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> 38f36cc04be569531877b6e653bbbcfcbd6f872f
     // Muscles: ID numbers for muscles
             // 1 - Biceps brachii
             // 2 - Anterior deltoid
@@ -69,8 +82,8 @@ $(document).ready(function () {
             // 13 - Brachialis
             // 14 - Obliquus externus abdominis
             // 15 - Soleus
-    
-    
+
+
     // "https://wger.de/api/v2/exercise/?equipment=7"
-    
+
     // "https://wger.de/api/v2/exercise/?muscles=1&equipment=7&language=2"
