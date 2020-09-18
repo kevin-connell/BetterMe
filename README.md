@@ -16,14 +16,13 @@ A recipe and fitness application built for users of all health and fitness level
 The user can search for or filter based on his or her dieting restrictions and recipes are generated from the user's selections. Workouts are tailored and determined by the user's activity level marked. 
 The user can favorite recipes and revisit those meals at any time using the favorite recipes drop down menu. 
 
-## Functionality 
+## Demo 
 ![betterMe gif](./Assets/Images/betterMe.gif)
 
 ## Screenshots 
 
 ![betterMe home](./Assets/Images/home-page.png)
 ![betterMe select recipe](./Assets/Images/select-recipe.png)
-![betterMe selected card](./Assets/Images/recipe-work-cards.png)
 ![betterMe favorite](./Assets/Images/favorite-recipe.png)
 
 
