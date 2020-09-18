@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
     // Clear Previous Selected Recipe if Any
-    
+
     var selectedRecipe = [];
 
     localStorage.setItem("selectedRecipe", JSON.stringify(selectedRecipe));
-    
+
     // Variables For Health and Diet
 
     var balanced = "";
@@ -101,6 +101,10 @@ $(document).ready(function () {
         }
     });
 
+
+
+
+
     // Function to Run Edamam API
 
     $("#recipeSearchButton").on("click", function (event) {
@@ -161,7 +165,35 @@ $(document).ready(function () {
             // Add results to local storage
             localStorage.setItem("recipeResults", JSON.stringify(recipeResults));
 
-            
+
+
+            // Selecting Workout Intensity
+
+            var selectedWorkoutIntesity = $("input[name='workoutIntesity']:checked").val();
+
+            if (selectedWorkoutIntesity === "sedentary") {
+
+                localStorage.setItem("selectedWorkoutIntesity", selectedWorkoutIntesity);
+            }
+
+            else if (selectedWorkoutIntesity === "moderate") {
+                
+                localStorage.setItem("selectedWorkoutIntesity", selectedWorkoutIntesity);
+            }
+
+            else if (selectedWorkoutIntesity === "active") {
+                
+                localStorage.setItem("selectedWorkoutIntesity", selectedWorkoutIntesity);
+            }
+
+            else {
+
+                selectedWorkoutIntesity = "none selected";
+                
+                localStorage.setItem("selectedWorkoutIntesity", selectedWorkoutIntesity);
+            }
+
+
 
             // Continue to next window. Contains recipe results
             window.location.replace("select-recipe.html");

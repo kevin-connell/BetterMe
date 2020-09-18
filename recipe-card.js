@@ -65,7 +65,7 @@ $(document).ready(function () {
 
     $("#recipeCaloriesPerServing").text("Calories per serving: " + (calories / servings).toFixed(0));
 
-    for (i = 0; i < ingredients.length; i++){
+    for (i = 0; i < ingredients.length; i++) {
 
         var newIngredient = $("<li></li>");
 
@@ -79,4 +79,60 @@ $(document).ready(function () {
 
 
 
+    // Workout IDs
+
+    var sedentaryWorkoutID = ["470", "607", "604"];
+    var moderateWorkoutID = ["795", "548", "341"];
+    var activeWorkoutID = ["814", "206", "393"];
+    
+    // Select Workout Intensity Level
+
+    var exerciseID;
+
+    var selectedWorkoutIntesity = localStorage.getItem("selectedWorkoutIntesity");
+
+    if (selectedWorkoutIntesity == "sedentary") {
+
+        exerciseID = sedentaryWorkoutID[Math.floor(Math.random() * 3)];
+    }
+
+    else if (selectedWorkoutIntesity == "moderate") {
+        
+        exerciseID = moderateWorkoutID[Math.floor(Math.random() * 3)];
+    }
+
+    else if (selectedWorkoutIntesity == "active") {
+        
+        exerciseID = activeWorkoutID[Math.floor(Math.random() * 3)];
+    }
+
+    else if (selectedWorkoutIntesity == "none selected") {
+        
+        var random = Math.floor(Math.random() * 3);
+
+        if (random = 0){
+            exerciseID = sedentaryWorkoutID[Math.floor(Math.random() * 3)];
+        }
+
+        else if (random = 1){
+            exerciseID = moderateWorkoutID[Math.floor(Math.random() * 3)];
+        }
+
+        else if (random = 2){
+            exerciseID = activeWorkoutID[Math.floor(Math.random() * 3)];
+        }
+    }
+    
+    // Get Workout From API
+
+    var queryURL = "https://wger.de/api/v2/exercise/" + exerciseID;
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+
+        $("#workoutDescription").text(response.description);
+    });
 });
