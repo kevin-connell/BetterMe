@@ -17,9 +17,9 @@ for (var i = 0; i < recipeResults.length; i++) {
 
     $("#recipeResults").prepend(newResult);
 
-    $(newResult).append(newResultImg);
-
     $(newResult).append(newResultName);
+
+    $(newResult).append(newResultImg);
 
     $(newResultImg).attr("src", recipeResults[i].recipe.image);
 

@@ -130,10 +130,11 @@
 
             <!-- Checkbox options for activity level-->
                 <h5>Select your activity level</h5>
-                <form action="#">
+                
+                <form action="#" id="myForm">
                     <p>
                         <label>
-                            <input type="checkbox" class="filled-in sedentary" />
+                            <input type="radio" name="workoutIntesity" value="sedentary">
                             <span>Sedentary</span>
                             <i class="fas fa-couch"></i>
                             <p><small>You tend to spend much time seated with little to no exercise</small></p>
@@ -142,7 +143,7 @@
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" class="filled-in moderate" />
+                            <input type="radio" name="workoutIntesity" value="moderate">
                             <span>Moderate</span>
                             <i class="fas fa-walking"></i>
                             <p><small>You're occasionally on your feet and exercise 3-5 days a week</small></p>
@@ -151,7 +152,7 @@
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" class="filled-in active" />
+                            <input type="radio" name="workoutIntesity" value="active">
                             <span>Active</span>
                             <i class="fas fa-running"></i>
                             <p><small>You're always on your feet and exercise 5-7 days a week</small></p>

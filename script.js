@@ -17,8 +17,7 @@ $(document).ready(function () {
     
     function GetInfoWorkout() {
     
-        var queryURL = "https://wger.de/api/v2/exercise/?muscles=1&equipment=3"
-    
+        var queryURL = "https://wger.de/api/v2/exercise/" + exerciseID;
     
         $.ajax({
             url: queryURL,
@@ -28,10 +27,9 @@ $(document).ready(function () {
         });
     };
 
+    // GetInfoWorkout();
+
 });
-    
-<<<<<<< HEAD
-    GetInfoWorkout();
 
 //  ID numbers for sedentary workouts: 
      
@@ -53,10 +51,8 @@ $(document).ready(function () {
 
 
 
-=======
     // GetInfoWorkout();
     
->>>>>>> bd7d2fa0b8d82fbc0e7697f01314c640c7a18431
     // Muscles: ID numbers for muscles
             // 1 - Biceps brachii
             // 2 - Anterior deltoid
