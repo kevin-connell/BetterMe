@@ -133,6 +133,7 @@ $(document).ready(function () {
     }).then(function (response) {
         console.log(response);
 
-        $("#workoutDescription").text(response.description);
+        $("#workoutDescription").html(response.description);
+        $("#workoutTitle").text(response.name);
     });
 });
