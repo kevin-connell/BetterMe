@@ -81,9 +81,35 @@ h6 {
 
 .veg-pic {
     position: absolute;
-    width: 45%;
+    width: 20%;
     float: center;
     right: 45px;
     margin-top: 10%;
+    box-shadow: -30px 30px 20px rgba(, 0, 0, 0.3);
 
+}
+
+.paragraph-2 {
+    font-family: 'Marcellus SC', serif;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #6b8c42;
+    text-align: center;
+    font-size: 28px;
+}
+
+#recipeResults {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Marcellus SC', serif;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #6b8c42;
+    box-shadow: -20px 30px 20px rgba(0, 0, 0, 0.3);
+}
+
+#workoutTitle {
+    text-align: center;
+}
+
+#centered {
+    
 }
