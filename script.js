@@ -62,7 +62,8 @@ $(document).ready(function () {
     // 393 - ("name": Upper Body")
 
 
-
+    // GetInfoWorkout();
+    
     // Muscles: ID numbers for muscles
             // 1 - Biceps brachii
             // 2 - Anterior deltoid
