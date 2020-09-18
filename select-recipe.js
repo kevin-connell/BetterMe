@@ -107,7 +107,7 @@ $(document).ready(function () {
 
     // Function to Run Edamam API
 
-    $("#recipeSearchButton").on("click", function (event) {
+    $(".recipeSearchButton").on("click", function (event) {
         event.preventDefault();
 
         // Create/Reset recipe array to store recipe results
