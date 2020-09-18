@@ -1,5 +1,7 @@
 # 🍽BetterMe
 
+### [CLICK HERE TO VIEW LIVE SITE](https://kevinconnell96.github.io/BetterMe/) 
+
 ## User Story
 ```
 I am a busy individual with dieting restrictions and fluctuating fitness levels.
