@@ -17,16 +17,16 @@ for (var i = 0; i < recipeResults.length; i++) {
 
     $("#recipeResults").prepend(newResult);
 
-    $(newResult).append(newResultImg);
-
     $(newResult).append(newResultName);
+
+    $(newResult).append(newResultImg);
 
     $(newResultImg).attr("src", recipeResults[i].recipe.image);
 
     $(newResultName).text(recipeResults[i].recipe.label);
 }
 
-$(".newResult").on("click", function(event) { 
+$(".newResult").on("click", function (event) {
     event.preventDefault();
 
     var recipeNumber = this.id;
@@ -36,4 +36,10 @@ $(".newResult").on("click", function(event) {
     selectedRecipe.push(recipeResults[recipeNumber]);
 
     localStorage.setItem("selectedRecipe", JSON.stringify(selectedRecipe));
+
+    // Continue to next window. Contains recipe results
+    window.location.replace("recipe-card.html");
 });
+
+
+// Workout results

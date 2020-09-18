@@ -10,6 +10,7 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico">
     <meta class="foundation-mq">
     <title>BetterMe</title>
 </head>
@@ -21,23 +22,37 @@
         <li class="divider"></li>
         <li><a href="#!">three</a></li>
     </ul>
+
     <nav>
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo"></i>BetterMe</a>
+            <a href="index.html" class="brand-logo">BetterMe</a>
             <ul class="right hide-on-med-and-down">
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Favorites<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">❤️️Favorites<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
     </nav>
 
-    <main>
-        <div id="imageHolder"></div><img id="recipeImage">
+    <!-- Recipe card -->
 
-        <h1 id="recipeTitle">Title</h1>
-        <p>See the full recipe at: <a id="recipeLink">source</a></p>
+    <main class="container">
+        <div class="row">
+            <div class="col s12 m7">
+                <div class="card">
+                    <div class="card-image">
+                        <div id="imageHolder"></div><img id="recipeImage">
+                        <h1 id="recipeTitle">Recipe Title</h1>
+                    </div>
+                    <div class="card-content">
+                        <p id="recipeCalories"></p>
+                        <p id="recipeServings"></p>
+                        <p id="recipeCaloriesPerServing"></p>
 
+                        <p>Ingredients</p>
 
+                        <ol id="ingredients"></ol>
 
+                        <p>See the full recipe at: <a id="recipeLink">source</a></p>
 
                     </div>
                 </div>
@@ -45,7 +60,14 @@
         </div>
     </main>
 
+<<<<<<< HEAD
     <!-- Workout card -->
+=======
+<<<<<<< HEAD
+    <!-- Workout card -->
+=======
+>>>>>>> 38f36cc04be569531877b6e653bbbcfcbd6f872f
+>>>>>>> 2057d400e7739851d96ad05a2fb6662014f5b0eb
 
     <main class="container">
         <div class="row">
@@ -56,17 +78,24 @@
                         <h1 id="exerciseImageTitle">Workout</h1>
                     </div>
                     <div class="card-content">
+<<<<<<< HEAD
                         <p id="workoutDescription">Description</p>
+=======
+<<<<<<< HEAD
+                        <p id="exerciseDescription"></p>
+                    </div>
+=======
+                        <p id="workoutDescription">Description</p>
+>>>>>>> 38f36cc04be569531877b6e653bbbcfcbd6f872f
+>>>>>>> 2057d400e7739851d96ad05a2fb6662014f5b0eb
                 </div>
             </div>
     </main>
 
-    <!-- Recipe card -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="recipe-card.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
 </body>
 
 </html>
