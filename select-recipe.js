@@ -117,7 +117,7 @@ $(document).ready(function () {
         // Search Term Variables
 
         var searchTerm = $("#recipeSearch").val().trim();;
-        var numberOfResults = "10";
+        var numberOfResults = "20";
         var calorieMin = "0";
         var calorieMax = "2000";
 
