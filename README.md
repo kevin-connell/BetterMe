@@ -30,3 +30,10 @@ The user can favorite recipes and revisit those meals at any time using the favo
 - [Materialize](https://materializecss.com/) 
 - [Edamam API](https://developer.edamam.com/edamam-docs-recipe-api) 
 - [wger API](https://wger.de/en/software/api) 
+
+
+## Developers
+* [Gregory Allen](https://github.com/GregoryAllen36)
+* [Kevin Connell](https://github.com/kevinconnell96)
+* [Kristy Keller](https://github.com/KristyKeller) 
+* [Joshua Trevethan](https://github.com/JoshTrev) 
