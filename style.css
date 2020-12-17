@@ -1,3 +1,7 @@
+* {
+    font-family: 'Andika New Basic', sans-serif;
+}
+
 body {
     background-color: #f2f2f2;
 }
@@ -9,20 +13,14 @@ body {
 
 h1 {
     text-align: center;
-    font-family: 'Marcellus SC', serif;
-    font-family: 'Nanum Pen Script', cursive;
-    color: #6b8c42;
+    color: #93c178;
     font-size: 60px;
     margin: 2%;
-
-
 }
 
 h2 {
     text-align: center;
-    font-family: 'Marcellus SC', serif;
-    font-family: 'Nanum Pen Script', cursive;
-    color: #6b8c42;
+    color: #93c178;
     font-size: 54px;
 }
 
@@ -35,46 +33,34 @@ h2 {
 }
 
 .nav-wrapper {
-    background-color: rgb(160, 190, 126);
+    background-color: #465c8b;
 }
 
-.brand-logo {}
-
 .paragragh-1 {
-    font-family: 'Marcellus SC', serif;
-    font-family: 'Nanum Pen Script', cursive;
-    color: #6b8c42;
+    color: #93c178;
     font-size: 30px;
     margin-left: 1px;
 }
 
 h5 {
-    font-family: 'Marcellus SC', serif;
-    font-family: 'Nanum Pen Script', cursive;
-    color: #6b8c42;
+    color: #93c178;
     font-size: 35px;
 }
 
 .dropdown-trigger {
-    font-family: 'Marcellus SC', serif;
-    font-family: 'Nanum Pen Script', cursive;
-    color: #6b8c42;
+    color: #93c178;
     font-size: 30px;
 }
 
 h3 {
-    font-family: 'Marcellus SC', serif;
-    font-family: 'Nanum Pen Script', cursive;
-    color: #6b8c42;
+    color: #93c178;
     font-size: 45px;
     text-align: center;
 }
 
 h6 {
     text-align: center;
-    color: #6b8c42;
-    font-family: 'Marcellus SC', serif;
-    font-family: 'Nanum Pen Script', cursive;
+    color: #93c178;
     font-size: 35px;
 
 }
@@ -85,14 +71,10 @@ h6 {
     float: center;
     right: 45px;
     margin-top: 10%;
-    box-shadow: -30px 30px 20px rgba(, 0, 0, 0.3);
-
 }
 
 .paragraph-2 {
-    font-family: 'Marcellus SC', serif;
-    font-family: 'Nanum Pen Script', cursive;
-    color: #6b8c42;
+    color: #93c178;
     text-align: center;
     font-size: 28px;
 }
@@ -100,9 +82,7 @@ h6 {
 #recipeResults {
     text-align: center;
     font-size: 30px;
-    font-family: 'Marcellus SC', serif;
-    font-family: 'Nanum Pen Script', cursive;
-    color: #6b8c42;
+    color: #93c178;
     box-shadow: -20px 30px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -110,6 +90,51 @@ h6 {
     text-align: center;
 }
 
-#centered {
-    
+.searchBarContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#recipeSearch {
+    width: calc(100% - 95px);
+    box-shadow: none;
+    border: 1px solid #9e9e9e;
+    border-right: none !important;
+    height: 40px;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 15px;
+}
+
+.recipeSearchButton {
+    height: 42px;
+    border-radius: 0px 10px 10px 0px !important;
+    box-shadow: none;
+    background-color: #498a72;
+}
+
+.userInfoContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.preferenceItem {
+    width: 150px !important;
+    padding: 10px .75rem 20px !important;
+    color: black !important;
+}
+
+.dietContainer {
+    width: 300px;
+}
+
+.rounded {
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+
+.radioOption {
+    padding-top: 10px !important;
 }
