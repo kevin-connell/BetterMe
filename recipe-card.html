@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="./Assets/Images/favicon.ico">
     <meta class="foundation-mq">
     <title>BetterMe</title>
 </head>
@@ -25,9 +28,11 @@
     <!-- Header -->
     <nav>
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo"></i>BetterMe</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">❤️️Favorites<i
+            <a href="index.html" style="font-size: 2.1rem; margin-left: 25px;"><img
+                    style="width: 28px; padding-right: 3px;" src="./Assets/Images/BetterMeLogo.png"
+                    alt="better me logo">BetterMe</a>
+            <ul class="right">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Favorites<i
                             class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
@@ -36,43 +41,36 @@
 
     <!-- Recipe card -->
 
-    <main class="container">
-        <div class="">
-            <div class="col s12 m7">
-                <div id="centered" class="card">
-                    <div class="card-image">
-                        <div id="imageHolder"></div><img id="recipeImage">
-                        <h1 id="recipeTitle">Recipe Title</h1>
-                    </div>
-                    <div class="card-content">
-                        <p id="recipeCalories"></p>
-                        <p id="recipeServings"></p>
-                        <p id="recipeCaloriesPerServing"></p>
+    <main class="container" style="display: flex; justify-content: center; flex-direction: column;">
 
-                        <p>Ingredients</p>
+        <div id="centered" class="card" style="border-radius: 25px; overflow: hidden;">
+            <div class="card-image">
+                <div id="imageHolder"></div><img style="max-height: 250px;" id="recipeImage">
+                <h1 id="recipeTitle">Recipe Title</h1>
+            </div>
+            <div class="card-content">
+                <p id="recipeCalories"></p>
+                <p id="recipeServings"></p>
+                <p id="recipeCaloriesPerServing"></p>
 
-                        <ol id="ingredients"></ol>
+                <p>Ingredients</p>
 
-                        <p>See the full recipe at: <a id="recipeLink">source</a><span style="float:right"><button id="addToFavorites"><i id="star" class="far fa-star"></i> Add to Favorites</button></span></p>
+                <ol id="ingredients"></ol>
 
-                    </div>
-                </div>
+                <p>See the full recipe at: <a id="recipeLink">source</a><span style="float:right"><button
+                            id="addToFavorites"><i id="star" class="far fa-star"></i> Add to
+                            Favorites</button></span></p>
+
             </div>
         </div>
-    </main>
 
-    <main class="container">
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <div id="exerciseImageHolder"></div><img id="exerciseImage">
-                        <h1 id="exerciseImageTitle">Workout</h1>
-                    </div>
-                    <p id="workoutTitle"></p>
-                    <div class="card-content" id="workoutDescription"></div>
-                </div>
+        <div class="card" style="border-radius: 25px; overflow: hidden;">
+            <div class="card-image">
+                <div id="exerciseImageHolder"></div><img id="exerciseImage">
             </div>
+            <h1 id="workoutTitle"></h1>
+            <div class="card-content" id="workoutDescription"></div>
+        </div>
     </main>
 
 

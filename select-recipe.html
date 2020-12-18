@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="./Assets/Images/favicon.ico">
     <meta class="foundation-mq">
     <title>BetterMe</title>
 </head>
@@ -26,22 +29,24 @@
     <!-- Header -->
     <nav>
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo"></i>BetterMe</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">❤️️Favorites<i
+            <a href="index.html" style="font-size: 2.1rem; margin-left: 25px;"><img
+                    style="width: 28px; padding-right: 3px;" src="./Assets/Images/BetterMeLogo.png"
+                    alt="better me logo">BetterMe</a>
+            <ul class="right">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Favorites<i
                             class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Select recipe form -->
-    <main></main>
-    <h3>Select your recipe</h3>
-    <p class="paragraph-2">From the following options, select the meal that interests you the most, or search through
-        our recipe catalog.
-        Let's get cooking!</p>
+    <main class="container">
+        <h3>Select your recipe</h3>
+        <p style="margin: 0px 25px 15px; text-align: center;">Select a recipe that interests you to get information and
+            a workout pairing!</p>
 
-    <div id="recipeResults"></div>
+        <div id="recipeResults"></div>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="display-recipe-results.js"></script>

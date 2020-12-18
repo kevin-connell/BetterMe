@@ -83,7 +83,6 @@ h6 {
     text-align: center;
     font-size: 30px;
     color: #93c178;
-    box-shadow: -20px 30px 20px rgba(0, 0, 0, 0.3);
 }
 
 #workoutTitle {
@@ -137,4 +136,27 @@ h6 {
 
 .radioOption {
     padding-top: 10px !important;
+}
+
+.resultTile {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.resultTile:hover {
+    background-color: #dff9f3;
+}
+
+.resultImage {
+    height: 150px;
+}
+
+.resultText {
+    margin-left: 15px;
 }

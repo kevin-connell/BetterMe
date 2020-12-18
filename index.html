@@ -19,12 +19,18 @@
 </head>
 
 <body>
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+    </ul>
     <!-- Header -->
     <nav>
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo" style="margin-left: 25px;">BetterMe</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">❤️️Favorites<i
+            <a href="index.html" style="font-size: 2.1rem; margin-left: 25px;"><img style="width: 28px; padding-right: 3px;" src="./Assets/Images/BetterMeLogo.png" alt="better me logo">BetterMe</a>
+            <ul class="right">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Favorites<i
                             class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
@@ -38,7 +44,7 @@
 
         <div class="rounded">
 
-            <h6 style="margin-bottom: 20px;">Search</h6>
+            <h6 style="margin-bottom: 20px;">What would you like to eat?</h6>
             <div class="container searchBarContainer">
                 <input class="col s10" type="text" id="recipeSearch" name="recipeSearch">
                 <button class="btn recipeSearchButton">Search</button>

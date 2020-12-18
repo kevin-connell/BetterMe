@@ -35,24 +35,24 @@ $(document).ready(function () {
 
         // Displaying Recipe Results
 
-        var newResult = $("<div class='card rounded shadow-sm newResult' id=" + i + "></div>");
+        var newResult = $("<div class='resultTile' id=" + i + "></div>");
 
-        var newResultImg = $("<img src=''>");
+        var newResultImg = $("<img class='resultImage' src=''>");
 
-        var newResultName = $("<p></p>");
+        var newResultName = $("<p class='resultText'></p>");
 
         $("#recipeResults").prepend(newResult);
 
-        $(newResult).append(newResultName);
-
         $(newResult).append(newResultImg);
+
+        $(newResult).append(newResultName);
 
         $(newResultImg).attr("src", recipeResults[i].recipe.image);
 
         $(newResultName).text(recipeResults[i].recipe.label);
     }
 
-    $(".newResult").on("click", function(event) { 
+    $(".resultTile").on("click", function(event) { 
         event.preventDefault();
 
         var recipeNumber = this.id;
